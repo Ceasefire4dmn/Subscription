@@ -1,0 +1,148 @@
+/* === Global === */
+* {
+  margin: 10px;
+}
+
+body {
+  margin: 10px;
+  background: rgb(62, 56, 69);
+}
+
+h1 {
+  margin-top: -20px;
+}
+
+p {
+  margin-top: 50px;
+}
+/* === Media === */
+@media (max-width: 900px) {
+  .card {
+    flex-shrink: 1;
+  }
+  .card-wrapper {
+    flex-basis: 30vh;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1720px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+
+/* === Main Content === */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5vh;
+  gap: 5vh;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.card-wrapper {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  z-index: 1;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+
+  padding: 30px;
+  gap: 30px;
+  flex-shrink: 0;
+  height: 800px;
+  width: 350px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  box-sizing: border-box;
+  color: rgb(82, 80, 80);
+
+  background: rgb(255, 255, 255);
+}
+
+.back {
+  display: flex;
+  position: absolute;
+  z-index: 0;
+  height: 103%;
+  width: 70%;
+
+  border-radius: 30px;
+  background-color: blue;
+  margin-top: -10px;
+  margin-left: 52px;
+}
+
+.decor {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  height: 10%;
+  width: 100%;
+  top: 17%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-image: url(./galochka.png);
+  padding: 0;
+  list-style-position: inside;
+}
+
+.btn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  width: 45%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: background-image 5s ease;
+}
+
+.c1 {
+  background-image: linear-gradient(120deg, #833dc8, #2c30a8 80%, #bf9ce2 110%);
+}
+.c2 {
+  background-image: linear-gradient(250deg, #33006f, #f9629f);
+}
+.c3 {
+  background-image: linear-gradient(250deg, #c67ace, #ffa900);
+}
+
+/* === Animations === */
+
+.btn.c1:hover {
+  background-image: linear-gradient(120deg, #bf9ce2, #2c30a8 80%, #833dc8 110%);
+}
+
+.btn.c2:hover {
+  background-image: linear-gradient(250deg, #f9629f, #33006f);
+}
+
+.btn.c3:hover {
+  background-image: linear-gradient(250deg, #ffa900, #c67ace);
+}
