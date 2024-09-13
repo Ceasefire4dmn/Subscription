@@ -41,10 +41,10 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5vh;
-  gap: 5vh;
+  padding: 3%;
   box-sizing: border-box;
-  height: 100vh;
+  margin: auto;
+  max-width: 1500px;
 }
 
 .card-wrapper {
